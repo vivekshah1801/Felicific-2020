@@ -29,14 +29,14 @@
 }
 
 .subtext{
-    margin-top: 70px;
+    margin-top: 50px;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 20px;
     font-weight: 800;
 }
 
 .subtext2{
-    margin-top:30px;
+    margin-top:15px;
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 7px;
 }
@@ -46,13 +46,14 @@
     font-size: 60px;
     margin: 20px;
     letter-spacing: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     font-family: 'Girassol', sans-serif;
 
 }
 
 #countdown {
     margin: 2vh auto 4vh;
+    margin-top:10px;
     top: 50%;
     left: 0;
     right: 0;
@@ -89,17 +90,79 @@
   }
   
   @media (max-width:480px) {
-      #countdown {
-          width: 100%;
-      }
-      #countdown > div {
-          width: 25%;
-          font-size: 30px;
-          font-weight: 700;
-          line-height: .8em;
-          letter-spacing: 2px;
-      }
-      #countdown > div > span {
-        font-size: 11px;
-      }
+
+    body{
+        background: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    }
+
+    .subtext{
+        font-size:16px;
+    }
+
+    .subtext2{
+        font-size: 8px;
+    }
+
+    #countdown {
+        width: 100%;
+    }
+    #countdown > div {
+        width: 25%;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: .8em;
+        letter-spacing: 2px;
+    }
+    #countdown > div > span {
+    font-size: 11px;
+    }
+}
+
+
+.fallback{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+
+.join-team{
+    width:20%;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+}
+
+.join-team:hover{
+    color:white;
+    background-color: black;
+}
+
+
+
+@keyframes heartBeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    14% {
+      transform: scale(1.1);
+    }
+  
+    28% {
+      transform: scale(1);
+    }
+  
+    42% {
+      transform: scale(1.1);
+    }
+  
+    70% {
+      transform: scale(1);
+    }
+  }
+  
+  .heartBeat {
+    animation-name: heartBeat;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
   }

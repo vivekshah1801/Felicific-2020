@@ -7,12 +7,12 @@
     
 </head>
 <body>
-    <div id="netBackground" width="100px" height="100px">
+    <div id="netBackground" class="dummy animated-net" width="100px" height="100px">
     </div>
 
     <div id="content">
         <div class="fluid-container logo mt-4 justify-content-center">
-            <img src="https://www.felicific.org/felicific.png" alt="felicific-logo" class="img img-responsive logo"/>
+            <img src="logo.png" alt="felicific-logo" class="img img-responsive logo"/>
         </div> 
         <div class="fluid-container mt-4 justify-content-center">
             <h3 class="subtext text-white text-center">DHARMSINH DESAI UNIVERSITY</h3>
@@ -28,6 +28,11 @@
             <div><p id="minute_t" class="text-white">00</p id="day_t"><span class="text-white">Minutes</span class="text-white"></div> 
             <div><p id="second_t" class="text-white">00</p id="day_t"><span class="text-white">Seconds</span></div>
         </div>
+
+        <div class="fluid-container mt-4 justify-content-center text-center">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVJRSh0K9zPGiTZzY1quF5AC-Rm_UWcm4a62u_WcQuVSScWw/viewform?usp=sf_link" title="Join the team" class="btn btn-light btn-lg join-team heartBeat text-center justify-content-center"> <b style="font-size:16px">Join The Team</b> </a>
+        </div>
+
     </div>
 
     <!-- for animation -->
@@ -37,9 +42,22 @@
     <script src="netAnimation.js"></script>
 
     <script>
+        $(document).ready( function() {
+            
+            if($(window).width() > 980) {
+                $('#netBackground').addClass('animated-net');
+            }
+            else{
+
+                $('#netBackground').remove();
+                $("body").addClass("fallback");
+            }
+        })
+    </script>
+    <script>
     window.onload = function(){
         VANTA.NET({
-        el: "#netBackground",
+        el: ".animated-net",
         color: 0xff0000,
         backgroundColor: 0x0,
         points: 16.00,
