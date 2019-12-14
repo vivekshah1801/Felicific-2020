@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Felicific 2020</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Girassol|Open+Sans&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="netBackground" width="100px" height="100px">
+    </div>
+
+    <div id="content">
+        <div class="fluid-container logo mt-4 justify-content-center">
+            <img src="https://www.felicific.org/felicific.png" alt="felicific-logo" class="img img-responsive logo"/>
+        </div> 
+        <div class="fluid-container mt-4 justify-content-center">
+            <h3 class="subtext text-white text-center">DHARMSINH DESAI UNIVERSITY</h3>
+            <h6 class="subtext2 text-white text-center">PRESENTS</h6>    
+        </div> 
+        <div class="fluid-container mt-4 justify-content-center">
+            <h1 class="f-text text-white text-center">Felicific 2020</h1>
+        </div> 
+
+        <div id="countdown" class=" text-center text-white fluid-container mt-4 justify-content-center">
+            <div><p id="day_t" class="text-white">00</p><span class="text-white">Days</span class="text-white"></div> 
+            <div><p id="hour_t" class="text-white">00</p id="day_t"><span class="text-white">Hours</span class="text-white"></div> 
+            <div><p id="minute_t" class="text-white">00</p id="day_t"><span class="text-white">Minutes</span class="text-white"></div> 
+            <div><p id="second_t" class="text-white">00</p id="day_t"><span class="text-white">Seconds</span></div>
+        </div>
+    </div>
+
+    <!-- for animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="netAnimation.js"></script>
+
+    <script>
+    window.onload = function(){
+        VANTA.NET({
+        el: "#netBackground",
+        color: 0xff0000,
+        backgroundColor: 0x0,
+        points: 16.00,
+        maxDistance: 21.00,
+        spacing: 14.00
+        });
+    }
+    </script>
+    <!-- Animation Over -->
+    <script type="text/javascript">
+        var count = new Date("mar 2,2020 00:00:00").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var d = count - now;
+            var days = Math.floor(d/(1000*60*60*24));
+            var hours = Math.floor( (d%(1000*60*60*24)) / (1000*60*60));
+            var minutes = Math.floor( (d%(1000*60*60)) / (1000*60));
+            var seconds = Math.floor((d%(1000*60)) / 1000);
+
+            document.getElementById("day_t").innerHTML = days;
+            document.getElementById("hour_t").innerHTML = hours;
+            document.getElementById("minute_t").innerHTML = minutes;
+            document.getElementById("second_t").innerHTML = seconds;
+
+            if(d <= 0){
+                clearInterval(x);
+            }
+
+        },1000)
+    </script>
+</body>
+</html>
+
+ 
+

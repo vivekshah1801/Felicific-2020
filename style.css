@@ -1,0 +1,105 @@
+
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+#netBackground
+{
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#content{
+    position: fixed;
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    top:0px;
+    left:0px;
+}
+
+.logo{
+    margin-top:200px;
+    margin:auto;
+    width:100px;
+}
+
+.subtext{
+    margin-top: 70px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 20px;
+    font-weight: 800;
+}
+
+.subtext2{
+    margin-top:30px;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 7px;
+}
+
+.f-text{
+    text-transform: uppercase;
+    font-size: 60px;
+    margin: 20px;
+    letter-spacing: 10px;
+    margin-bottom: 80px;
+    font-family: 'Girassol', sans-serif;
+
+}
+
+#countdown {
+    margin: 2vh auto 4vh;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 100px;
+    width: 50%;
+  }
+  
+  #countdown.show {
+    display: block;
+  }
+  
+  #countdown > div {
+    position: relative;
+    float: left;
+    width: 25%;
+    font-size: 4vw;
+    font-weight: 100;
+    line-height: .8em;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #ccc;
+    font-family: 'Baloo Bhaijaan',serif;
+  }
+  
+  #countdown > div > span {
+    display: block;
+    font-size: 1.2vw;
+    font-weight: 100;
+    line-height: 1.2em;
+    letter-spacing: 0;
+    margin-top: 20px;
+    color: #777;
+    text-transform: lowercase
+  }
+  
+  @media (max-width:480px) {
+      #countdown {
+          width: 100%;
+      }
+      #countdown > div {
+          width: 25%;
+          font-size: 30px;
+          font-weight: 700;
+          line-height: .8em;
+          letter-spacing: 2px;
+      }
+      #countdown > div > span {
+        font-size: 11px;
+      }
+  }
