@@ -95,18 +95,20 @@
         background: #0F2027;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-        padding-top: 200px;
     }
 
-
+    #content{
+        margin-top: 200px;
+    }
 
     .subtext{
-        font-size:16px;
+        font-size:8px;
     }
 
     .subtext2{
-        font-size: 8px;
+        font-size: 5px;
     }
+
 
     #countdown {
         width: 100%;
@@ -131,6 +133,8 @@
 }
 
 .join-team{
+    padding-top:15px;
+    padding-bottom: 15px;
     width:20%;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
 }
